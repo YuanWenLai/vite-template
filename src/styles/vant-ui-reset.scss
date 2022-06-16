@@ -1,0 +1,148 @@
+@import './variable';
+
+// van-diaglog重写
+.van-dialog {
+    &.modifyDialog {
+        top: 40%;
+        width: 65%;
+
+        .van-dialog__message {
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+
+    .van-button {
+        border-radius: 0;
+        box-shadow: none !important;
+    }
+
+    &__confirm {
+        color: $color-primary !important;
+    }
+}
+
+.van-loading {
+    position: absolute !important;
+    left: 40%;
+    z-index: 999;
+    margin: 0;
+}
+
+// van-bar 重写
+.van-nav-bar {
+    z-index: 999 !important;
+    height: 88px !important;
+    border: none !important;
+}
+
+.van-nav-bar__title {
+    font-weight: 600;
+    color: rgb(0 0 0 / 86%);
+}
+
+.van-nav-bar--fixed {
+    z-index: 999 !important;
+}
+
+.van-field__control:disabled {
+    color: #666;
+}
+
+// van-cell统一颜色
+.van-cell {
+    .van-icon {
+        color: #b0b0b0;
+    }
+}
+
+// van-tab重写
+.van-tabs {
+    .van-tabs__wrap {
+        top: 45px;
+        border-radius: 0 0 12px 12px;
+
+        .van-tabs__nav {
+            .van-tabs__line {
+                width: 24px !important;
+                background: $color-primary;
+                border-radius: 2px;
+            }
+
+            .van-tab--active {
+                font-weight: 600;
+                color: $color-primary;
+            }
+        }
+    }
+
+    .van-tab {
+        font-size: 28px;
+    }
+}
+
+// 统一switch颜色
+.van-switch {
+    background-color: #f8f8f8 !important;
+
+    .van-switch__node {
+        background: #8c8c8c;
+    }
+}
+
+.van-switch--on {
+    background-color: #d3e7ff;
+
+    .van-switch__node {
+        background: $color-primary;
+    }
+}
+
+// 统一checkbox颜色
+.van-checkbox,
+.van-radio {
+    .van-checkbox__icon--checked,
+    .van-radio__icon--checked {
+        .van-icon {
+            background-color: $color-primary;
+            border-color: $color-primary !important;
+        }
+    }
+
+    .van-radio__label--disabled,
+    .van-checkbox__label--disabled {
+        color: #000;
+    }
+}
+
+// van-radio重写
+.van-radio-group {
+    &--horizontal {
+        display: flex;
+        flex-direction: row;
+
+        .van-radio {
+            margin: 0 10px;
+        }
+    }
+
+    &--vertical {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.van-tabbar {
+    z-index: 3999 !important;
+    height: $footer-height;
+
+    &-item__icon {
+        width: 24px;
+        height: 24px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
